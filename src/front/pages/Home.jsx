@@ -1,5 +1,4 @@
 import React, { useEffect } from "react"
-import rigoImageUrl from "../assets/img/rigo-baby.jpg";
 import useGlobalReducer from "../hooks/useGlobalReducer.jsx";
 
 export const Home = () => {
@@ -33,19 +32,21 @@ export const Home = () => {
 	}, [])
 
 	return (
-		<div className="text-center mt-5">
-			<h1 className="display-4">Hello Rigo!!</h1>
-			<p className="lead">
-				<img src={rigoImageUrl} className="img-fluid rounded-circle mb-3" alt="Rigo Baby" />
-			</p>
-			<div className="alert alert-info">
-				{store.message ? (
-					<span>{store.message}</span>
-				) : (
-					<span className="text-danger">
-						Loading message from the backend (make sure your python 🐍 backend is running)...
-					</span>
-				)}
+		<div className="container py-5">
+			<div className="row align-items-center">
+				<div className="col-md-6">
+					<h1 className="display-4 fw-bold">Welcome to Your Authentication App</h1>
+					<p className="lead text-muted">
+						This is a full-stack authentication system built with Flask and React.
+					</p>
+					<p className="mb-4">{store.hello || "Loading greeting..."}</p>
+					<a href="/signup" className="btn btn-primary btn-lg me-3">
+						Sign Up
+					</a>
+					<a href="/login" className="btn btn-outline-secondary btn-lg">
+						Login
+					</a>
+				</div>
 			</div>
 		</div>
 	);
