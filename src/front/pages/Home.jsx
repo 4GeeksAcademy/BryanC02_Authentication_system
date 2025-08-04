@@ -39,7 +39,6 @@ export const Home = () => {
 					<p className="lead text-muted">
 						This is a full-stack authentication system built with Flask and React.
 					</p>
-					<p className="mb-4">{store.hello || "Loading greeting..."}</p>
 					<a href="/signup" className="btn btn-primary btn-lg me-3">
 						Sign Up
 					</a>
